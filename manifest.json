@@ -1,0 +1,30 @@
+{
+  "name": "Convert Facebook Newsfeed to Wikipedia",
+  "version": "0.0.0.1",
+  "author": "Matthew Davis",
+  "manifest_version": 2,
+  "description": "Sick of your ad-ridden Facebook newsfeed? Convert it to Hacker News!",
+  "permissions": [
+    "http://www.facebook.com/*",
+    "https://www.facebook.com/*",
+    "http://web.facebook.com/*",
+    "https://web.facebook.com/*",
+    "https://en.m.wikipedia.org/*",
+    "https://en.wikipedia.org/*",
+    "https://en.wikipedia.org/wiki/*"
+  ],
+
+  "icons": {
+    "128": "images/wiki.png"
+  },
+  "browser_action": {
+    "default_icon": "images/wiki.png"
+  },
+  "content_scripts": [
+    {
+        "matches": ["http://www.facebook.com/*", "https://www.facebook.com/*","http://web.facebook.com/*","https://web.facebook.com/*", "https://www.facebook.com/?ref=tn_tnmn"],
+        "js" : ["scripts/chrome.js"],
+        "run_at" : "document_start"
+    }
+  ]
+}
