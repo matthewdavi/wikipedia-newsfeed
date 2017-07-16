@@ -20,9 +20,7 @@
     "128": "images/wiki.png"
   },
   "browser_action": {
-    "default_icon": "images/wiki.png",
-    "default_popup" : "popup.html",
-    "default_title": "Pause the extension"
+    "default_icon": "images/wiki.png"
   },
   "content_scripts": [
     {
