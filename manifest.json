@@ -3,7 +3,7 @@
   "version": "0.0.0.1",
   "author": "Matthew Davis",
   "manifest_version": 2,
-  "description": "Sick of your ad-ridden Facebook newsfeed? Convert it to Hacker News!",
+  "description": "Sick of your ad-ridden Facebook newsfeed? Convert it to a random Wikipedia Article",
   "permissions": [
     "http://www.facebook.com/*",
     "https://www.facebook.com/*",
@@ -11,14 +11,18 @@
     "https://web.facebook.com/*",
     "https://en.m.wikipedia.org/*",
     "https://en.wikipedia.org/*",
-    "https://en.wikipedia.org/wiki/*"
+    "https://en.wikipedia.org/wiki/*",
+    "https://en.m.wikipedia.org/wiki/*",
+    "https://en.m.wikipedia.org/wiki/Special:Random#/random"
   ],
 
   "icons": {
     "128": "images/wiki.png"
   },
   "browser_action": {
-    "default_icon": "images/wiki.png"
+    "default_icon": "images/wiki.png",
+    "default_popup" : "popup.html",
+    "default_title": "Pause the extension"
   },
   "content_scripts": [
     {
